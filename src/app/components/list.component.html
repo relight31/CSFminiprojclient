@@ -1,0 +1,17 @@
+<h2>List of Contacts</h2>
+<table class="table table-hover">
+  <thead class="table-light">
+    <th>Name</th>
+    <th>Email</th>
+    <th>Mobile</th>
+    <th></th>
+  </thead>
+  <tbody>
+    <tr *ngFor="let c of contacts">
+      <td>{{ c.name }}</td>
+      <td>{{ c.email }}</td>
+      <td>{{ c.mobile }}</td>
+      <td><button class="btn-close"></button></td>
+    </tr>
+  </tbody>
+</table>

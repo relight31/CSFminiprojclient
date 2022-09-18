@@ -1,0 +1,62 @@
+<form [formGroup]="form" (ngSubmit)="submitForm()">
+  <table>
+    <thead>
+      <th>
+        <h2>Add a Contact</h2>
+      </th>
+    </thead>
+    <tbody>
+      <tr>
+        <td>
+          <label for="name" class="form-label">Name:</label>
+        </td>
+        <td>
+          <input
+            type="text"
+            id="name"
+            class="form-control"
+            formControlName="name"
+          />
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <label for="email" class="form-label">Email:</label>
+        </td>
+        <td>
+          <input
+            type="text"
+            id="email"
+            class="form-control"
+            placeholder="name@example.com"
+            formControlName="email"
+          />
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <label for="mobile" class="form-label">Mobile:</label>
+        </td>
+        <td>
+          <input
+            type="text"
+            id="mobile"
+            class="form-control"
+            formControlName="mobile"
+          />
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <button
+            type="submit"
+            class="btn btn-outline-success"
+            [disabled]="form.invalid"
+          >
+            Add Contact
+          </button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</form>
